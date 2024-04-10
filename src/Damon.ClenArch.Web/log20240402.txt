@@ -1,0 +1,146 @@
+2024-04-02 15:05:06.927 +08:00 [INF] Registered 5 endpoints in 3,794 milliseconds.
+2024-04-02 15:05:10.386 +08:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-04-02 15:05:10.749 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-04-02 15:05:11.148 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-02 15:05:11.148 +08:00 [INF] Hosting environment: Development
+2024-04-02 15:05:11.149 +08:00 [INF] Content root path: D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web
+2024-04-02 15:05:11.574 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger - null null
+2024-04-02 15:05:13.515 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - null null
+2024-04-02 15:05:13.517 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger - 302 null null 1945.5948ms
+2024-04-02 15:05:14.383 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - 200 null text/html; charset=utf-8 868.1045ms
+2024-04-02 15:05:14.388 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui-standalone-preset.js - null null
+2024-04-02 15:05:14.396 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui-bundle.js - null null
+2024-04-02 15:05:14.396 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-02 15:05:14.403 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - null null
+2024-04-02 15:05:14.404 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.css - null null
+2024-04-02 15:05:14.409 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 10.9507ms
+2024-04-02 15:05:14.418 +08:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-04-02 15:05:14.418 +08:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-04-02 15:05:14.418 +08:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-04-02 15:05:14.420 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.css - 200 218 text/css 14.9355ms
+2024-04-02 15:05:14.422 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui-standalone-preset.js - 200 230642 text/javascript 33.7468ms
+2024-04-02 15:05:14.422 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - 200 151213 text/css 19.0698ms
+2024-04-02 15:05:14.433 +08:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-04-02 15:05:14.454 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui-bundle.js - 200 1385018 text/javascript 57.9549ms
+2024-04-02 15:05:14.476 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - null null
+2024-04-02 15:05:14.617 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - 200 null text/javascript; charset=UTF-8 140.5161ms
+2024-04-02 15:05:15.997 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - null null
+2024-04-02 15:05:16.074 +08:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-04-02 15:05:17.071 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 1073.9558ms
+2024-04-02 15:05:35.172 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:57678/Contributors - application/json 56
+2024-04-02 15:05:35.181 +08:00 [WRN] Failed to determine the https port for redirect.
+2024-04-02 15:05:35.188 +08:00 [INF] Executing endpoint 'HTTP: POST /Contributors'
+2024-04-02 15:05:35.323 +08:00 [INF] Executed endpoint 'HTTP: POST /Contributors'
+2024-04-02 15:05:35.324 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:57678/Contributors - 400 null application/problem+json 151.668ms
+2024-04-02 15:05:52.410 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:57678/Contributors - application/json 59
+2024-04-02 15:05:52.434 +08:00 [INF] Executing endpoint 'HTTP: POST /Contributors'
+2024-04-02 15:05:52.487 +08:00 [INF] Handling CreateContributorCommand
+2024-04-02 15:05:52.488 +08:00 [INF] Property Name : Contributor Name
+2024-04-02 15:05:52.488 +08:00 [INF] Property PhoneNumber : 159144
+2024-04-02 15:05:52.849 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (Size = 16), @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status", "PhoneNumber_CountryCode", "PhoneNumber_Extension", "PhoneNumber_Number")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2024-04-02 15:05:52.889 +08:00 [INF] Handled CreateContributorCommand with Ardalis.Result.Result`1[System.Int32] in 400 ms
+2024-04-02 15:05:52.897 +08:00 [INF] Executed endpoint 'HTTP: POST /Contributors'
+2024-04-02 15:05:52.901 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:57678/Contributors - 200 null application/json 491.8531ms
+2024-04-02 15:06:00.899 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/Contributors - null null
+2024-04-02 15:06:00.900 +08:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-04-02 15:06:00.918 +08:00 [INF] Handling ListContributorsQuery
+2024-04-02 15:06:00.919 +08:00 [INF] Property Skip : null
+2024-04-02 15:06:00.919 +08:00 [INF] Property Take : null
+2024-04-02 15:06:01.012 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-04-02 15:06:01.016 +08:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Damon.ClenArch.UseCases.Contributors.ContributorDTO]] in 97 ms
+2024-04-02 15:06:01.022 +08:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-04-02 15:06:01.024 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/Contributors - 200 null application/json 123.6881ms
+2024-04-02 15:06:10.317 +08:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57678/Contributors/2 - null null
+2024-04-02 15:06:10.319 +08:00 [INF] Executing endpoint 'HTTP: DELETE /Contributors/{ContributorId:int}'
+2024-04-02 15:06:10.337 +08:00 [INF] Handling DeleteContributorCommand
+2024-04-02 15:06:10.338 +08:00 [INF] Property ContributorId : 2
+2024-04-02 15:06:10.340 +08:00 [INF] Deleting Contributor 2
+2024-04-02 15:06:10.447 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__p_0
+LIMIT 1
+2024-04-02 15:06:10.462 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Contributors"
+WHERE "Id" = @p0
+RETURNING 1;
+2024-04-02 15:06:10.487 +08:00 [INF] Handling Contributed Deleted event for 2
+2024-04-02 15:06:10.850 +08:00 [WRN] Sending email to to@test.com from from@test.com with subject Contributor Deleted using Damon.ClenArch.Infrastructure.Email.MimeKitEmailSender.
+2024-04-02 15:06:15.425 +08:00 [INF] Executed endpoint 'HTTP: DELETE /Contributors/{ContributorId:int}'
+2024-04-02 15:06:15.429 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Sockets.SocketException (10061): 由于目标计算机积极拒绝，无法连接。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MailKit.Net.SocketUtils.SocketConnectState.OnEndConnect(IAsyncResult ar)
+--- End of stack trace from previous location ---
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetwork(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at MailKit.MailService.Connect(String host, Int32 port, Boolean useSsl, CancellationToken cancellationToken)
+   at Damon.ClenArch.Infrastructure.Email.MimeKitEmailSender.SendEmailAsync(String to, String from, String subject, String body) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Infrastructure\Email\MimeKitEmailSender.cs:line 27
+   at Damon.ClenArch.Core.ContributorAggregate.Handlers.ContributorDeletedHandler.Handle(ContributorDeletedEvent domainEvent, CancellationToken cancellationToken) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\ContributorAggregate\Handlers\ContributorDeletedHandler.cs:line 18
+   at MediatR.NotificationPublishers.ForeachAwaitPublisher.Publish(IEnumerable`1 handlerExecutors, INotification notification, CancellationToken cancellationToken)
+   at Damon.ClenArch.Core.Services.DeleteContributorService.DeleteContributor(Int32 contributorId) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\Services\DeleteContributorService.cs:line 30
+   at Damon.ClenArch.UseCases.Contributors.Delete.DeleteContributorHandler.Handle(DeleteContributorCommand request, CancellationToken cancellationToken) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\Contributors\Delete\DeleteContributorHandler.cs:line 14
+   at Ardalis.SharedKernel.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Damon.ClenArch.Web.Contributors.Delete.HandleAsync(DeleteContributorRequest request, CancellationToken cancellationToken) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web\Contributors\Delete.cs:line 29
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Ardalis.ListStartupServices.ShowAllServicesMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-04-02 15:06:15.502 +08:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57678/Contributors/2 - 500 null text/plain; charset=utf-8 5184.7187ms
+2024-04-02 18:02:16.373 +08:00 [INF] Registered 5 endpoints in 2,695 milliseconds.
+2024-04-02 18:02:18.498 +08:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-04-02 18:02:18.707 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-04-02 18:02:18.945 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-02 18:02:18.945 +08:00 [INF] Hosting environment: Development
+2024-04-02 18:02:18.945 +08:00 [INF] Content root path: D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web
+2024-04-02 18:02:19.195 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger - null null
+2024-04-02 18:02:20.304 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - null null
+2024-04-02 18:02:20.305 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger - 302 null null 1110.7561ms
+2024-04-02 18:02:20.808 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - 200 null text/html; charset=utf-8 504.5963ms
+2024-04-02 18:02:20.824 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - null null
+2024-04-02 18:02:20.826 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui-bundle.js - null null
+2024-04-02 18:02:20.826 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.css - null null
+2024-04-02 18:02:20.834 +08:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-04-02 18:02:20.834 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.css - 200 218 text/css 8.1896ms
+2024-04-02 18:02:20.837 +08:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-04-02 18:02:20.840 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - 200 151213 text/css 15.9615ms
+2024-04-02 18:02:20.853 +08:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-04-02 18:02:20.874 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui-bundle.js - 200 1385018 text/javascript 47.8525ms
+2024-04-02 18:02:20.902 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui-standalone-preset.js - null null
+2024-04-02 18:02:20.903 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-02 18:02:20.907 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 2.8561ms
+2024-04-02 18:02:20.907 +08:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-04-02 18:02:20.916 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui-standalone-preset.js - 200 230642 text/javascript 13.0721ms
+2024-04-02 18:02:20.932 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - null null
+2024-04-02 18:02:21.018 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - 200 null text/javascript; charset=UTF-8 86.1679ms
+2024-04-02 18:02:21.674 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - null null
+2024-04-02 18:02:21.711 +08:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-04-02 18:02:22.445 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 770.9821ms
+2024-04-02 18:03:27.201 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/listservices - null null
+2024-04-02 18:03:27.207 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/listservices - 200 null null 6.2519ms
+2024-04-02 18:03:27.535 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/favicon.ico - null null
+2024-04-02 18:03:27.536 +08:00 [WRN] Failed to determine the https port for redirect.
+2024-04-02 18:03:27.538 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/favicon.ico - 404 null null 2.9795ms
+2024-04-02 18:03:27.539 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:57678/favicon.ico, Response status code: 404

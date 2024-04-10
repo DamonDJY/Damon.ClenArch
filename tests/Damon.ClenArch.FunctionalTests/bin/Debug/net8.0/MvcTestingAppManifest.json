@@ -1,0 +1,6 @@
+{
+  "Damon.ClenArch.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "d:\\Code\\clean-code\\Damon.ClenArch\\src\\Damon.ClenArch.Core",
+  "Damon.ClenArch.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "d:\\Code\\clean-code\\Damon.ClenArch\\src\\Damon.ClenArch.Infrastructure",
+  "Damon.ClenArch.UseCases, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "d:\\Code\\clean-code\\Damon.ClenArch\\src\\Damon.ClenArch.UseCases",
+  "Damon.ClenArch.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "d:\\Code\\clean-code\\Damon.ClenArch\\src\\Damon.ClenArch.Web"
+}

@@ -1,0 +1,109 @@
+2024-04-03 09:59:35.821 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/listservices - null null
+2024-04-03 09:59:35.834 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/listservices - 200 null null 12.9481ms
+2024-04-03 10:15:35.982 +08:00 [INF] Registered 5 endpoints in 929 milliseconds.
+2024-04-03 10:15:37.830 +08:00 [ERR] An error occurred seeding the DB. Connection string keyword 'charset' is not supported. For a possible alternative, see https://go.microsoft.com/fwlink/?linkid=2142181.
+System.ArgumentException: Connection string keyword 'charset' is not supported. For a possible alternative, see https://go.microsoft.com/fwlink/?linkid=2142181.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureCreated()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureCreated()
+   at Program.<<Main>$>g__SeedDatabase|0_3(WebApplication app) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web\Program.cs:line 92
+2024-04-03 10:15:38.170 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-03 10:15:38.170 +08:00 [INF] Hosting environment: Development
+2024-04-03 10:15:38.170 +08:00 [INF] Content root path: D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web
+2024-04-03 10:15:38.449 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger - null null
+2024-04-03 10:15:38.923 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - null null
+2024-04-03 10:15:38.927 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger - 302 null null 482.0182ms
+2024-04-03 10:15:39.544 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - 200 null text/html; charset=utf-8 621.7952ms
+2024-04-03 10:15:39.561 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-03 10:15:39.575 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 6.3199ms
+2024-04-03 10:15:39.609 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - null null
+2024-04-03 10:15:39.662 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.4768ms
+2024-04-03 10:15:40.164 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - null null
+2024-04-03 10:15:40.250 +08:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-04-03 10:15:41.035 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 870.9912ms
+2024-04-03 10:18:36.820 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/Contributors - null null
+2024-04-03 10:18:36.825 +08:00 [WRN] Failed to determine the https port for redirect.
+2024-04-03 10:18:36.829 +08:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-04-03 10:18:36.887 +08:00 [INF] Handling ListContributorsQuery
+2024-04-03 10:18:36.887 +08:00 [INF] Property Skip : null
+2024-04-03 10:18:36.887 +08:00 [INF] Property Take : null
+2024-04-03 10:18:37.208 +08:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Damon.ClenArch.Infrastructure.Data.AppDbContext'.
+System.ArgumentException: Connection string keyword 'charset' is not supported. For a possible alternative, see https://go.microsoft.com/fwlink/?linkid=2142181.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder..ctor(String connectionString)
+   at Microsoft.Data.Sqlite.SqliteConnectionFactory.GetPoolGroup(String connectionString)
+   at Microsoft.Data.Sqlite.SqliteConnection.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.ArgumentException: Connection string keyword 'charset' is not supported. For a possible alternative, see https://go.microsoft.com/fwlink/?linkid=2142181.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder..ctor(String connectionString)
+   at Microsoft.Data.Sqlite.SqliteConnectionFactory.GetPoolGroup(String connectionString)
+   at Microsoft.Data.Sqlite.SqliteConnection.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2024-04-03 10:18:37.213 +08:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-04-03 10:18:37.217 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Connection string keyword 'charset' is not supported. For a possible alternative, see https://go.microsoft.com/fwlink/?linkid=2142181.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder..ctor(String connectionString)
+   at Microsoft.Data.Sqlite.SqliteConnectionFactory.GetPoolGroup(String connectionString)
+   at Microsoft.Data.Sqlite.SqliteConnection.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Damon.ClenArch.Infrastructure.Data.Queries.ListContributorsQueryService.ListAsync()
+   at Damon.ClenArch.UseCases.Contributors.List.ListContributorsHandler.Handle(ListContributorsQuery request, CancellationToken cancellationToken) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\Contributors\List\ListContributorsHandler.cs:line 11
+   at Ardalis.SharedKernel.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Damon.ClenArch.Web.Contributors.List.HandleAsync(CancellationToken cancellationToken) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web\Contributors\List.cs:line 25
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Ardalis.ListStartupServices.ShowAllServicesMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-04-03 10:18:37.252 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/Contributors - 500 null text/plain; charset=utf-8 432.2355ms
+2024-04-03 10:23:12.127 +08:00 [INF] Application is shutting down...
+2024-04-03 10:23:33.438 +08:00 [INF] Registered 5 endpoints in 317 milliseconds.
+2024-04-03 10:23:34.190 +08:00 [ERR] An error occurred seeding the DB. Connection string keyword 'charset' is not supported. For a possible alternative, see https://go.microsoft.com/fwlink/?linkid=2142181.
+System.ArgumentException: Connection string keyword 'charset' is not supported. For a possible alternative, see https://go.microsoft.com/fwlink/?linkid=2142181.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureCreated()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureCreated()
+   at Program.<<Main>$>g__SeedDatabase|0_3(WebApplication app) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web\Program.cs:line 92
+2024-04-03 10:23:34.385 +08:00 [INF] Now listening on: https://localhost:57679
+2024-04-03 10:23:34.387 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-03 10:23:34.389 +08:00 [INF] Hosting environment: Development
+2024-04-03 10:23:34.391 +08:00 [INF] Content root path: D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web

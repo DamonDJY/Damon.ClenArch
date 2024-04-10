@@ -1,0 +1,15 @@
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\bin\Debug\net8.0\Damon.ClenArch.UseCases.deps.json
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\bin\Debug\net8.0\Damon.ClenArch.UseCases.dll
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\bin\Debug\net8.0\Damon.ClenArch.UseCases.pdb
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\bin\Debug\net8.0\Damon.ClenArch.Core.dll
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\bin\Debug\net8.0\Damon.ClenArch.Core.pdb
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\obj\Debug\net8.0\Damon.ClenArch.UseCases.csproj.AssemblyReference.cache
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\obj\Debug\net8.0\Damon.ClenArch.UseCases.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\obj\Debug\net8.0\Damon.ClenArch.UseCases.AssemblyInfoInputs.cache
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\obj\Debug\net8.0\Damon.ClenArch.UseCases.AssemblyInfo.cs
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\obj\Debug\net8.0\Damon.ClenArch.UseCases.csproj.CoreCompileInputs.cache
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\obj\Debug\net8.0\Damon.ClenArch.UseCases.csproj.CopyComplete
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\obj\Debug\net8.0\Damon.ClenArch.UseCases.dll
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\obj\Debug\net8.0\refint\Damon.ClenArch.UseCases.dll
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\obj\Debug\net8.0\Damon.ClenArch.UseCases.pdb
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\obj\Debug\net8.0\ref\Damon.ClenArch.UseCases.dll

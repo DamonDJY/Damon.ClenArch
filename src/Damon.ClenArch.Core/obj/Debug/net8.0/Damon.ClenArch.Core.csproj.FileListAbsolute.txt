@@ -1,0 +1,12 @@
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\bin\Debug\net8.0\Damon.ClenArch.Core.deps.json
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\bin\Debug\net8.0\Damon.ClenArch.Core.dll
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\bin\Debug\net8.0\Damon.ClenArch.Core.pdb
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\obj\Debug\net8.0\Damon.ClenArch.Core.csproj.AssemblyReference.cache
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\obj\Debug\net8.0\Damon.ClenArch.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\obj\Debug\net8.0\Damon.ClenArch.Core.AssemblyInfoInputs.cache
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\obj\Debug\net8.0\Damon.ClenArch.Core.AssemblyInfo.cs
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\obj\Debug\net8.0\Damon.ClenArch.Core.csproj.CoreCompileInputs.cache
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\obj\Debug\net8.0\Damon.ClenArch.Core.dll
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\obj\Debug\net8.0\refint\Damon.ClenArch.Core.dll
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\obj\Debug\net8.0\Damon.ClenArch.Core.pdb
+D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\obj\Debug\net8.0\ref\Damon.ClenArch.Core.dll

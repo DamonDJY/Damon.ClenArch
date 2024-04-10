@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Damon.ClenArch.Web.props" />
+</Project>

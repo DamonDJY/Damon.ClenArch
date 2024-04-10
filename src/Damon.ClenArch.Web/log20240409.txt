@@ -1,0 +1,427 @@
+2024-04-09 11:26:16.815 +08:00 [INF] Application is shutting down...
+2024-04-09 11:32:29.912 +08:00 [INF] Registered 6 endpoints in 1,710 milliseconds.
+2024-04-09 11:32:29.948 +08:00 [ERR] The route "PUT:/Contributors/{ContributorId:int}" has 2 endpoints registered to handle requests!
+2024-04-09 14:08:42.114 +08:00 [INF] Registered 6 endpoints in 3,202 milliseconds.
+2024-04-09 14:08:45.592 +08:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'clean_arch'
+2024-04-09 14:08:45.959 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Contributors` AS `c`)
+2024-04-09 14:08:46.313 +08:00 [INF] Now listening on: https://localhost:57679
+2024-04-09 14:08:46.324 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-09 14:08:46.326 +08:00 [INF] Hosting environment: Development
+2024-04-09 14:08:46.328 +08:00 [INF] Content root path: D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web
+2024-04-09 14:08:58.701 +08:00 [INF] Request starting HTTP/2 GET https://localhost:57679/ - null null
+2024-04-09 14:08:59.003 +08:00 [INF] Request finished HTTP/2 GET https://localhost:57679/ - 404 0 null 318.5088ms
+2024-04-09 14:08:59.013 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:57679/, Response status code: 404
+2024-04-09 14:09:03.019 +08:00 [INF] Request starting HTTP/2 GET https://localhost:57679/listservices - null null
+2024-04-09 14:09:03.040 +08:00 [INF] Request finished HTTP/2 GET https://localhost:57679/listservices - 200 null null 20.5363ms
+2024-04-09 14:09:09.165 +08:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger - null null
+2024-04-09 14:09:09.180 +08:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger - 302 0 null 14.2502ms
+2024-04-09 14:09:09.191 +08:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2024-04-09 14:09:09.623 +08:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 431.2182ms
+2024-04-09 14:09:10.368 +08:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2024-04-09 14:09:10.571 +08:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-04-09 14:09:11.532 +08:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 1163.7843ms
+2024-04-09 14:09:53.445 +08:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Contributors - application/json 60
+2024-04-09 14:09:53.457 +08:00 [INF] Executing endpoint 'HTTP: POST /Contributors'
+2024-04-09 14:09:53.673 +08:00 [INF] Handling CreateContributorCommand
+2024-04-09 14:09:53.676 +08:00 [INF] Property Name : Damon大帅哥
+2024-04-09 14:09:53.678 +08:00 [INF] Property PhoneNumber : 159144112
+2024-04-09 14:09:54.256 +08:00 [INF] Executed DbCommand (44ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Contributors` (`Name`, `Status`, `PhoneNumber_CountryCode`, `PhoneNumber_Extension`, `PhoneNumber_Number`)
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT `Id`
+FROM `Contributors`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2024-04-09 14:09:54.331 +08:00 [INF] Handled CreateContributorCommand with Ardalis.Result.Result`1[System.Int32] in 650 ms
+2024-04-09 14:09:54.346 +08:00 [INF] Executed endpoint 'HTTP: POST /Contributors'
+2024-04-09 14:09:54.359 +08:00 [INF] Request finished HTTP/2 POST https://localhost:57679/Contributors - 200 null application/json 913.8944ms
+2024-04-09 14:09:59.640 +08:00 [INF] Request starting HTTP/2 GET https://localhost:57679/Contributors - null null
+2024-04-09 14:09:59.664 +08:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-04-09 14:09:59.781 +08:00 [INF] Handling ListContributorsQuery
+2024-04-09 14:09:59.796 +08:00 [INF] Property Skip : null
+2024-04-09 14:09:59.799 +08:00 [INF] Property Take : null
+2024-04-09 14:10:00.044 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-04-09 14:10:00.090 +08:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Damon.ClenArch.UseCases.Contributors.ContributorDTO]] in 283 ms
+2024-04-09 14:10:00.140 +08:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-04-09 14:10:00.176 +08:00 [INF] Request finished HTTP/2 GET https://localhost:57679/Contributors - 200 null application/json 535.8782ms
+2024-04-09 14:10:19.284 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:57679/Contributors/3 - application/json 30
+2024-04-09 14:10:19.298 +08:00 [INF] Executing endpoint 'HTTP: PUT /Contributors/{ContributorId:int}'
+2024-04-09 14:10:19.364 +08:00 [INF] Handling UpdateContributorCommand
+2024-04-09 14:10:19.378 +08:00 [INF] Property ContributorId : 3
+2024-04-09 14:10:19.388 +08:00 [INF] Property NewName : 222
+2024-04-09 14:10:19.580 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Name`, `c`.`Status`, `c`.`PhoneNumber_CountryCode`, `c`.`PhoneNumber_Extension`, `c`.`PhoneNumber_Number`
+FROM `Contributors` AS `c`
+WHERE `c`.`Id` = @__p_0
+LIMIT 1
+2024-04-09 14:10:19.631 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+UPDATE `Contributors` SET `Name` = @p0, `Status` = @p1
+WHERE `Id` = @p2;
+SELECT ROW_COUNT();
+2024-04-09 14:10:19.643 +08:00 [INF] Handled UpdateContributorCommand with Ardalis.Result.Result`1[Damon.ClenArch.UseCases.Contributors.ContributorDTO] in 249 ms
+2024-04-09 14:10:19.649 +08:00 [INF] Handling GetContributorQuery
+2024-04-09 14:10:19.655 +08:00 [INF] Property ContributorId : 3
+2024-04-09 14:10:19.695 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Name`, `c`.`Status`, `c`.`PhoneNumber_CountryCode`, `c`.`PhoneNumber_Extension`, `c`.`PhoneNumber_Number`
+FROM `Contributors` AS `c`
+WHERE `c`.`Id` = @__contributorId_0
+LIMIT 1
+2024-04-09 14:10:19.708 +08:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Damon.ClenArch.UseCases.Contributors.ContributorDTO] in 47 ms
+2024-04-09 14:10:19.715 +08:00 [INF] Executed endpoint 'HTTP: PUT /Contributors/{ContributorId:int}'
+2024-04-09 14:10:19.721 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:57679/Contributors/3 - 200 null application/json 437.0496ms
+2024-04-09 14:11:43.687 +08:00 [INF] Application is shutting down...
+2024-04-09 14:12:09.443 +08:00 [INF] Registered 6 endpoints in 440 milliseconds.
+2024-04-09 14:12:11.978 +08:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'clean_arch'
+2024-04-09 14:12:12.261 +08:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Contributors` AS `c`)
+2024-04-09 14:12:12.384 +08:00 [INF] Now listening on: https://localhost:57679
+2024-04-09 14:12:12.404 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-09 14:12:12.433 +08:00 [INF] Hosting environment: Development
+2024-04-09 14:12:12.441 +08:00 [INF] Content root path: D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web
+2024-04-09 14:12:15.295 +08:00 [INF] Request starting HTTP/2 GET https://localhost:57679/Contributors - null null
+2024-04-09 14:12:15.365 +08:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-04-09 14:12:15.419 +08:00 [INF] Handling ListContributorsQuery
+2024-04-09 14:12:15.435 +08:00 [INF] Property Skip : null
+2024-04-09 14:12:15.446 +08:00 [INF] Property Take : null
+2024-04-09 14:12:15.698 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-04-09 14:12:15.782 +08:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Damon.ClenArch.UseCases.Contributors.ContributorDTO]] in 328 ms
+2024-04-09 14:12:15.826 +08:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-04-09 14:12:15.849 +08:00 [INF] Request finished HTTP/2 GET https://localhost:57679/Contributors - 200 null application/json 556.3322ms
+2024-04-09 14:12:19.932 +08:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2024-04-09 14:12:20.040 +08:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 107.9928ms
+2024-04-09 14:12:20.736 +08:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2024-04-09 14:12:20.810 +08:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-04-09 14:12:21.727 +08:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 991.1337ms
+2024-04-09 14:13:22.181 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:57679/Contributors/3 - application/json 60
+2024-04-09 14:13:22.189 +08:00 [INF] Executing endpoint 'HTTP: PUT /Contributors/{ContributorId:int}'
+2024-04-09 14:13:22.288 +08:00 [INF] Handling UpdateContributorCommand
+2024-04-09 14:13:22.295 +08:00 [INF] Property ContributorId : 3
+2024-04-09 14:13:22.299 +08:00 [INF] Property NewName : string
+2024-04-09 14:13:22.566 +08:00 [INF] Executed DbCommand (43ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Name`, `c`.`Status`, `c`.`PhoneNumber_CountryCode`, `c`.`PhoneNumber_Extension`, `c`.`PhoneNumber_Number`
+FROM `Contributors` AS `c`
+WHERE `c`.`Id` = @__p_0
+LIMIT 1
+2024-04-09 14:13:22.857 +08:00 [INF] Executed DbCommand (13ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+UPDATE `Contributors` SET `Name` = @p0, `Status` = @p1
+WHERE `Id` = @p2;
+SELECT ROW_COUNT();
+2024-04-09 14:13:22.883 +08:00 [INF] Handled UpdateContributorCommand with Ardalis.Result.Result`1[Damon.ClenArch.UseCases.Contributors.ContributorDTO] in 580 ms
+2024-04-09 14:13:22.892 +08:00 [INF] Handling GetContributorQuery
+2024-04-09 14:13:22.894 +08:00 [INF] Property ContributorId : 3
+2024-04-09 14:13:22.946 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Name`, `c`.`Status`, `c`.`PhoneNumber_CountryCode`, `c`.`PhoneNumber_Extension`, `c`.`PhoneNumber_Number`
+FROM `Contributors` AS `c`
+WHERE `c`.`Id` = @__contributorId_0
+LIMIT 1
+2024-04-09 14:13:22.954 +08:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Damon.ClenArch.UseCases.Contributors.ContributorDTO] in 53 ms
+2024-04-09 14:13:22.965 +08:00 [INF] Executed endpoint 'HTTP: PUT /Contributors/{ContributorId:int}'
+2024-04-09 14:13:22.972 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:57679/Contributors/3 - 200 null application/json 791.2949ms
+2024-04-09 14:13:39.502 +08:00 [INF] Request starting HTTP/2 GET https://localhost:57679/Contributors - null null
+2024-04-09 14:13:39.514 +08:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-04-09 14:13:39.516 +08:00 [INF] Handling ListContributorsQuery
+2024-04-09 14:13:39.518 +08:00 [INF] Property Skip : null
+2024-04-09 14:13:39.554 +08:00 [INF] Property Take : null
+2024-04-09 14:13:39.652 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-04-09 14:13:39.664 +08:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Damon.ClenArch.UseCases.Contributors.ContributorDTO]] in 77 ms
+2024-04-09 14:13:39.672 +08:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-04-09 14:13:39.681 +08:00 [INF] Request finished HTTP/2 GET https://localhost:57679/Contributors - 200 null application/json 178.4562ms
+2024-04-09 14:21:24.498 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:57679/Contributors/3 - application/json 58
+2024-04-09 14:21:24.632 +08:00 [INF] Executing endpoint 'HTTP: PUT /Contributors/{ContributorId:int}'
+2024-04-09 14:21:24.645 +08:00 [INF] Handling UpdateContributorCommand
+2024-04-09 14:21:24.674 +08:00 [INF] Property ContributorId : 3
+2024-04-09 14:21:24.683 +08:00 [INF] Property NewName : demo
+2024-04-09 14:21:24.925 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Name`, `c`.`Status`, `c`.`PhoneNumber_CountryCode`, `c`.`PhoneNumber_Extension`, `c`.`PhoneNumber_Number`
+FROM `Contributors` AS `c`
+WHERE `c`.`Id` = @__p_0
+LIMIT 1
+2024-04-09 14:21:24.972 +08:00 [INF] Executed DbCommand (17ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+UPDATE `Contributors` SET `Name` = @p0, `Status` = @p1
+WHERE `Id` = @p2;
+SELECT ROW_COUNT();
+2024-04-09 14:21:24.982 +08:00 [INF] Handled UpdateContributorCommand with Ardalis.Result.Result`1[Damon.ClenArch.UseCases.Contributors.ContributorDTO] in 286 ms
+2024-04-09 14:21:24.992 +08:00 [INF] Handling GetContributorQuery
+2024-04-09 14:21:25.001 +08:00 [INF] Property ContributorId : 3
+2024-04-09 14:21:25.044 +08:00 [INF] Executed DbCommand (15ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Name`, `c`.`Status`, `c`.`PhoneNumber_CountryCode`, `c`.`PhoneNumber_Extension`, `c`.`PhoneNumber_Number`
+FROM `Contributors` AS `c`
+WHERE `c`.`Id` = @__contributorId_0
+LIMIT 1
+2024-04-09 14:21:25.060 +08:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Damon.ClenArch.UseCases.Contributors.ContributorDTO] in 46 ms
+2024-04-09 14:21:25.066 +08:00 [INF] Executed endpoint 'HTTP: PUT /Contributors/{ContributorId:int}'
+2024-04-09 14:21:25.080 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:57679/Contributors/3 - 200 null application/json 582.5437ms
+2024-04-09 14:24:25.320 +08:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Contributors - application/json 57
+2024-04-09 14:24:25.334 +08:00 [INF] Executing endpoint 'HTTP: POST /Contributors'
+2024-04-09 14:24:25.370 +08:00 [INF] Executed endpoint 'HTTP: POST /Contributors'
+2024-04-09 14:24:25.383 +08:00 [INF] Request finished HTTP/2 POST https://localhost:57679/Contributors - 400 null application/problem+json 62.6944ms
+2024-04-09 14:24:38.344 +08:00 [INF] Request starting HTTP/2 POST https://localhost:57679/Contributors - application/json 63
+2024-04-09 14:24:38.382 +08:00 [INF] Executing endpoint 'HTTP: POST /Contributors'
+2024-04-09 14:24:38.388 +08:00 [INF] Handling CreateContributorCommand
+2024-04-09 14:24:38.404 +08:00 [INF] Property Name : Contributor Name1
+2024-04-09 14:24:38.423 +08:00 [INF] Property PhoneNumber : 153331231
+2024-04-09 14:24:38.606 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Contributors` (`Name`, `Status`, `PhoneNumber_CountryCode`, `PhoneNumber_Extension`, `PhoneNumber_Number`)
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT `Id`
+FROM `Contributors`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2024-04-09 14:24:38.669 +08:00 [INF] Handled CreateContributorCommand with Ardalis.Result.Result`1[System.Int32] in 222 ms
+2024-04-09 14:24:38.672 +08:00 [INF] Executed endpoint 'HTTP: POST /Contributors'
+2024-04-09 14:24:38.682 +08:00 [INF] Request finished HTTP/2 POST https://localhost:57679/Contributors - 200 null application/json 337.8306ms
+2024-04-09 14:27:08.216 +08:00 [INF] Application is shutting down...
+2024-04-09 14:27:25.997 +08:00 [INF] Registered 6 endpoints in 470 milliseconds.
+2024-04-09 14:27:27.893 +08:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'clean_arch'
+2024-04-09 14:27:28.209 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Contributors` AS `c`)
+2024-04-09 14:27:28.277 +08:00 [INF] Now listening on: https://localhost:57679
+2024-04-09 14:27:28.282 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-09 14:27:28.285 +08:00 [INF] Hosting environment: Development
+2024-04-09 14:27:28.288 +08:00 [INF] Content root path: D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web
+2024-04-09 14:27:51.605 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:57679/ContributorsForEdit/3 - application/json 46
+2024-04-09 14:27:51.695 +08:00 [INF] Executing endpoint 'HTTP: PUT /ContributorsForEdit/{ContributorId:int}'
+2024-04-09 14:27:51.851 +08:00 [INF] Handling EditContributorCommand
+2024-04-09 14:27:51.855 +08:00 [INF] Property ContributorId : 3
+2024-04-09 14:27:51.860 +08:00 [INF] Property Name : Damon
+2024-04-09 14:27:51.873 +08:00 [INF] Property PhoneNumber : 1122
+2024-04-09 14:27:51.961 +08:00 [INF] Editing contributor 3
+2024-04-09 14:27:52.282 +08:00 [INF] Executed DbCommand (70ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Name`, `c`.`Status`, `c`.`PhoneNumber_CountryCode`, `c`.`PhoneNumber_Extension`, `c`.`PhoneNumber_Number`
+FROM `Contributors` AS `c`
+WHERE `c`.`Id` = @__p_0
+LIMIT 1
+2024-04-09 14:27:52.599 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+UPDATE `Contributors` SET `Name` = @p0, `Status` = @p1, `PhoneNumber_Number` = @p2
+WHERE `Id` = @p3;
+SELECT ROW_COUNT();
+2024-04-09 14:27:52.636 +08:00 [INF] Contributor 3 edited
+2024-04-09 14:27:52.949 +08:00 [WRN] Sending email to to@test.com from from@test.com with subject Contributor Deleted using Damon.ClenArch.Infrastructure.Email.MimeKitEmailSender.
+2024-04-09 14:27:57.070 +08:00 [INF] Executed endpoint 'HTTP: PUT /ContributorsForEdit/{ContributorId:int}'
+2024-04-09 14:27:57.077 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Sockets.SocketException (10061): 由于目标计算机积极拒绝，无法连接。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MailKit.Net.SocketUtils.SocketConnectState.OnEndConnect(IAsyncResult ar)
+--- End of stack trace from previous location ---
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetwork(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at MailKit.MailService.Connect(String host, Int32 port, Boolean useSsl, CancellationToken cancellationToken)
+   at Damon.ClenArch.Infrastructure.Email.MimeKitEmailSender.SendEmailAsync(String to, String from, String subject, String body) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Infrastructure\Email\MimeKitEmailSender.cs:line 27
+   at Damon.ClenArch.Core.ContributorAggregate.Handlers.ContributorEditHandler.Handle(ContributorEditEvent notification, CancellationToken cancellationToken) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\ContributorAggregate\Handlers\ContributorEditHandler.cs:line 14
+   at MediatR.NotificationPublishers.ForeachAwaitPublisher.Publish(IEnumerable`1 handlerExecutors, INotification notification, CancellationToken cancellationToken)
+   at Damon.ClenArch.Core.Services.EditContributorService.EditContributorAsync(Int32 id, String name, String phoneNumber) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\Services\EditContributorService.cs:line 28
+   at Damon.ClenArch.UseCases.Contributors.EditContributorHandler.Handle(EditContributorCommand command, CancellationToken cancellationToken) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\Contributors\Edit\EditContributorHandler.cs:line 12
+   at Ardalis.SharedKernel.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Damon.ClenArch.Web.Contributors.Edit.HandleAsync(EditContributorRequest request, CancellationToken cancellationToken) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web\Contributors\Edit.cs:line 22
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Ardalis.ListStartupServices.ShowAllServicesMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-04-09 14:27:57.215 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:57679/ContributorsForEdit/3 - 500 null text/plain; charset=utf-8 5610.0865ms
+2024-04-09 14:28:25.976 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:57679/ContributorsForEdit/3 - application/json 46
+2024-04-09 14:28:26.055 +08:00 [INF] Executing endpoint 'HTTP: PUT /ContributorsForEdit/{ContributorId:int}'
+2024-04-09 14:28:26.062 +08:00 [INF] Handling EditContributorCommand
+2024-04-09 14:28:26.090 +08:00 [INF] Property ContributorId : 3
+2024-04-09 14:28:26.094 +08:00 [INF] Property Name : Damon
+2024-04-09 14:28:26.107 +08:00 [INF] Property PhoneNumber : 1122
+2024-04-09 14:28:26.179 +08:00 [INF] Editing contributor 3
+2024-04-09 14:28:26.211 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Name`, `c`.`Status`, `c`.`PhoneNumber_CountryCode`, `c`.`PhoneNumber_Extension`, `c`.`PhoneNumber_Number`
+FROM `Contributors` AS `c`
+WHERE `c`.`Id` = @__p_0
+LIMIT 1
+2024-04-09 14:28:26.254 +08:00 [INF] Executed DbCommand (11ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+UPDATE `Contributors` SET `Name` = @p0, `Status` = @p1
+WHERE `Id` = @p2;
+SELECT ROW_COUNT();
+2024-04-09 14:28:26.322 +08:00 [INF] Contributor 3 edited
+2024-04-09 14:28:26.342 +08:00 [WRN] Sending email to to@test.com from from@test.com with subject Contributor Deleted using Damon.ClenArch.Infrastructure.Email.MimeKitEmailSender.
+2024-04-09 14:28:30.441 +08:00 [INF] Executed endpoint 'HTTP: PUT /ContributorsForEdit/{ContributorId:int}'
+2024-04-09 14:28:30.443 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Sockets.SocketException (10061): 由于目标计算机积极拒绝，无法连接。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MailKit.Net.SocketUtils.SocketConnectState.OnEndConnect(IAsyncResult ar)
+--- End of stack trace from previous location ---
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.Connect(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetwork(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at MailKit.MailService.Connect(String host, Int32 port, Boolean useSsl, CancellationToken cancellationToken)
+   at Damon.ClenArch.Infrastructure.Email.MimeKitEmailSender.SendEmailAsync(String to, String from, String subject, String body) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Infrastructure\Email\MimeKitEmailSender.cs:line 27
+   at Damon.ClenArch.Core.ContributorAggregate.Handlers.ContributorEditHandler.Handle(ContributorEditEvent notification, CancellationToken cancellationToken) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\ContributorAggregate\Handlers\ContributorEditHandler.cs:line 14
+   at MediatR.NotificationPublishers.ForeachAwaitPublisher.Publish(IEnumerable`1 handlerExecutors, INotification notification, CancellationToken cancellationToken)
+   at Damon.ClenArch.Core.Services.EditContributorService.EditContributorAsync(Int32 id, String name, String phoneNumber) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\Services\EditContributorService.cs:line 28
+   at Damon.ClenArch.UseCases.Contributors.EditContributorHandler.Handle(EditContributorCommand command, CancellationToken cancellationToken) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\Contributors\Edit\EditContributorHandler.cs:line 12
+   at Ardalis.SharedKernel.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Damon.ClenArch.Web.Contributors.Edit.HandleAsync(EditContributorRequest request, CancellationToken cancellationToken) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web\Contributors\Edit.cs:line 22
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Ardalis.ListStartupServices.ShowAllServicesMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-04-09 14:28:30.486 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:57679/ContributorsForEdit/3 - 500 null text/plain; charset=utf-8 4509.604ms
+2024-04-09 14:29:35.257 +08:00 [INF] Request starting HTTP/2 GET https://localhost:57679/Contributors - null null
+2024-04-09 14:29:35.263 +08:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-04-09 14:29:35.364 +08:00 [INF] Handling ListContributorsQuery
+2024-04-09 14:29:35.370 +08:00 [INF] Property Skip : null
+2024-04-09 14:29:35.374 +08:00 [INF] Property Take : null
+2024-04-09 14:29:35.539 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-04-09 14:29:35.545 +08:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Damon.ClenArch.UseCases.Contributors.ContributorDTO]] in 167 ms
+2024-04-09 14:29:35.571 +08:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-04-09 14:29:35.576 +08:00 [INF] Request finished HTTP/2 GET https://localhost:57679/Contributors - 200 null application/json 318.7608ms
+2024-04-09 14:34:38.372 +08:00 [INF] Application is shutting down...
+2024-04-09 14:34:53.808 +08:00 [INF] Registered 6 endpoints in 276 milliseconds.
+2024-04-09 14:34:55.966 +08:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'clean_arch'
+2024-04-09 14:34:56.212 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Contributors` AS `c`)
+2024-04-09 14:34:56.291 +08:00 [INF] Now listening on: https://localhost:57679
+2024-04-09 14:34:56.304 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-09 14:34:56.305 +08:00 [INF] Hosting environment: Development
+2024-04-09 14:34:56.312 +08:00 [INF] Content root path: D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web
+2024-04-09 14:37:21.503 +08:00 [INF] Application is shutting down...
+2024-04-09 14:37:34.738 +08:00 [INF] Registered 6 endpoints in 705 milliseconds.
+2024-04-09 14:37:36.308 +08:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'clean_arch'
+2024-04-09 14:37:36.623 +08:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Contributors` AS `c`)
+2024-04-09 14:37:36.692 +08:00 [INF] Now listening on: https://localhost:57679
+2024-04-09 14:37:36.701 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-09 14:37:36.710 +08:00 [INF] Hosting environment: Development
+2024-04-09 14:37:36.718 +08:00 [INF] Content root path: D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web
+2024-04-09 14:38:08.374 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:57679/ContributorsForEdit/3 - application/json 53
+2024-04-09 14:38:08.456 +08:00 [INF] Executing endpoint 'HTTP: PUT /ContributorsForEdit/{ContributorId:int}'
+2024-04-09 14:38:08.584 +08:00 [INF] Handling EditContributorCommand
+2024-04-09 14:38:08.587 +08:00 [INF] Property ContributorId : 3
+2024-04-09 14:38:08.591 +08:00 [INF] Property Name : Damon
+2024-04-09 14:38:08.601 +08:00 [INF] Property PhoneNumber : 15914411450
+2024-04-09 14:38:08.702 +08:00 [INF] Editing contributor 3
+2024-04-09 14:38:09.003 +08:00 [INF] Executed DbCommand (48ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Name`, `c`.`Status`, `c`.`PhoneNumber_CountryCode`, `c`.`PhoneNumber_Extension`, `c`.`PhoneNumber_Number`
+FROM `Contributors` AS `c`
+WHERE `c`.`Id` = @__p_0
+LIMIT 1
+2024-04-09 14:38:09.275 +08:00 [INF] Executed DbCommand (19ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+UPDATE `Contributors` SET `Name` = @p0, `Status` = @p1, `PhoneNumber_Number` = @p2
+WHERE `Id` = @p3;
+SELECT ROW_COUNT();
+2024-04-09 14:38:09.310 +08:00 [INF] Contributor 3 edited
+2024-04-09 14:38:09.320 +08:00 [INF] Not actually sending an email to to@test.com from from@test.com with subject Contributor Deleted
+2024-04-09 14:38:09.327 +08:00 [INF] Executed endpoint 'HTTP: PUT /ContributorsForEdit/{ContributorId:int}'
+2024-04-09 14:38:09.340 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotImplementedException: The method or operation is not implemented.
+   at Damon.ClenArch.Core.Services.EditContributorService.EditContributorAsync(Int32 id, String name, String phoneNumber) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Core\Services\EditContributorService.cs:line 29
+   at Damon.ClenArch.UseCases.Contributors.EditContributorHandler.Handle(EditContributorCommand command, CancellationToken cancellationToken) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.UseCases\Contributors\Edit\EditContributorHandler.cs:line 12
+   at Ardalis.SharedKernel.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at Damon.ClenArch.Web.Contributors.Edit.HandleAsync(EditContributorRequest request, CancellationToken cancellationToken) in D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web\Contributors\Edit.cs:line 22
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Ardalis.ListStartupServices.ShowAllServicesMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-04-09 14:38:09.410 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:57679/ContributorsForEdit/3 - 500 null text/plain; charset=utf-8 1037.9107ms
+2024-04-09 14:46:05.269 +08:00 [INF] Application is shutting down...
+2024-04-09 14:49:51.222 +08:00 [INF] Registered 6 endpoints in 262 milliseconds.
+2024-04-09 14:49:52.816 +08:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'clean_arch'
+2024-04-09 14:49:53.033 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Contributors` AS `c`)
+2024-04-09 14:49:53.107 +08:00 [INF] Now listening on: https://localhost:57679
+2024-04-09 14:49:53.108 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-09 14:49:53.111 +08:00 [INF] Hosting environment: Development
+2024-04-09 14:49:53.115 +08:00 [INF] Content root path: D:\Code\clean-code\Damon.ClenArch\src\Damon.ClenArch.Web
+2024-04-09 14:50:59.640 +08:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2024-04-09 14:50:59.827 +08:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 191.9601ms
+2024-04-09 14:51:00.404 +08:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2024-04-09 14:51:00.444 +08:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-04-09 14:51:01.612 +08:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 1206.5517ms
+2024-04-09 14:51:15.659 +08:00 [INF] Request starting HTTP/2 GET https://localhost:57679/Contributors - null null
+2024-04-09 14:51:15.668 +08:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-04-09 14:51:15.729 +08:00 [INF] Handling ListContributorsQuery
+2024-04-09 14:51:15.732 +08:00 [INF] Property Skip : null
+2024-04-09 14:51:15.742 +08:00 [INF] Property Take : null
+2024-04-09 14:51:16.044 +08:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-04-09 14:51:16.115 +08:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Damon.ClenArch.UseCases.Contributors.ContributorDTO]] in 369 ms
+2024-04-09 14:51:16.159 +08:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-04-09 14:51:16.181 +08:00 [INF] Request finished HTTP/2 GET https://localhost:57679/Contributors - 200 null application/json 521.5049ms
+2024-04-09 14:52:28.065 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:57679/ContributorsForEdit/3 - application/json 54
+2024-04-09 14:52:28.073 +08:00 [INF] Executing endpoint 'HTTP: PUT /ContributorsForEdit/{ContributorId:int}'
+2024-04-09 14:52:28.212 +08:00 [INF] Handling EditContributorCommand
+2024-04-09 14:52:28.215 +08:00 [INF] Property ContributorId : 3
+2024-04-09 14:52:28.223 +08:00 [INF] Property Name : Damon大帅哥
+2024-04-09 14:52:28.227 +08:00 [INF] Property PhoneNumber : 110
+2024-04-09 14:52:28.311 +08:00 [INF] Editing contributor 3
+2024-04-09 14:52:28.465 +08:00 [INF] Executed DbCommand (49ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Name`, `c`.`Status`, `c`.`PhoneNumber_CountryCode`, `c`.`PhoneNumber_Extension`, `c`.`PhoneNumber_Number`
+FROM `Contributors` AS `c`
+WHERE `c`.`Id` = @__p_0
+LIMIT 1
+2024-04-09 14:52:28.697 +08:00 [INF] Executed DbCommand (16ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+UPDATE `Contributors` SET `Name` = @p0, `Status` = @p1, `PhoneNumber_Number` = @p2
+WHERE `Id` = @p3;
+SELECT ROW_COUNT();
+2024-04-09 14:52:28.728 +08:00 [INF] Entities with events: 0
+2024-04-09 14:52:28.730 +08:00 [INF] Dispatching events: 0
+2024-04-09 14:52:28.739 +08:00 [INF] Contributor 3 edited
+2024-04-09 14:52:28.745 +08:00 [INF] Not actually sending an email to to@test.com from from@test.com with subject Contributor Deleted
+2024-04-09 14:52:28.748 +08:00 [INF] Handled EditContributorCommand with Ardalis.Result.Result in 517 ms
+2024-04-09 14:52:28.763 +08:00 [INF] Executed endpoint 'HTTP: PUT /ContributorsForEdit/{ContributorId:int}'
+2024-04-09 14:52:28.771 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:57679/ContributorsForEdit/3 - 204 null null 706.193ms

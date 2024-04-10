@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "XZmr2lEYtd1smFFxN66z9Xvy2fJai5VaYz1UjmPVMM8=",
+  "Source": "Damon.ClenArch.Web",
+  "BasePath": "_content/Damon.ClenArch.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Damon.ClenArch.Web\\wwwroot",
+      "Source": "Damon.ClenArch.Web",
+      "ContentRoot": "D:\\Code\\clean-code\\Damon.ClenArch\\src\\Damon.ClenArch.Web\\wwwroot\\",
+      "BasePath": "_content/Damon.ClenArch.Web",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "d:\\Code\\clean-code\\Damon.ClenArch\\src\\Damon.ClenArch.Web\\wwwroot\\.gitkeep",
+      "SourceId": "Damon.ClenArch.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\clean-code\\Damon.ClenArch\\src\\Damon.ClenArch.Web\\wwwroot\\",
+      "BasePath": "_content/Damon.ClenArch.Web",
+      "RelativePath": ".gitkeep",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\.gitkeep"
+    }
+  ]
+}
